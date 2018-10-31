@@ -18,22 +18,6 @@ espresso_machine_state_is=:=off
 It then:
 * Sets a global variable in Tasker (`%ESPRESSO`) to on/off.
 * Sends the variable `%arcomm` (whatever is right of the =:=, i.e. `on` or `off`) to the KWGT variable, `Espresso_state`, which is used to control the color of the Espresso Machine button on the KWGT (Kustom) widget.
-
-___
-### Espresso_Machine_State.prf.xml
-
-Receives a message from Home Assistant via AutoRemote with message 
-```
-espresso_machine_state_is=:=on
-```
-or
-```
-espresso_machine_state_is=:=off
-```
-It then:
-* Sets a global variable in Tasker (`%ESPRESSO`) to on/off.
-* Sends the variable `%arcomm` (whatever is right of the =:=, i.e. `on` or `off`) to the KWGT variable, `Espresso_state`, which is used to control the color of the Espresso Machine button on the KWGT (Kustom) widget.
-
 ___
 ### Fountain_State.prf.xml
 
