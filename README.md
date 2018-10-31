@@ -65,7 +65,7 @@ The global variable, `%Latest_notification` is set to this joined array. Now we 
 Lastly, the sctring `%arcomm door was opened at %TIME` is sent to Kustom via `KWGT send variable` in the `Latest_notification` variable. This is then used to display info on my widget.
 
 ![Kustom_widget](https://github.com/Aephir/Images/blob/master/Kusotm_(KWGT)_widget_0.1.jpg)
-
+This widget can be found [here](https://github.com/Aephir/Tasker_Files/blob/master/KWGT/KWGT_20181031.kwgt)
 
 
 ## Tasker Tasks
