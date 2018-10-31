@@ -50,3 +50,23 @@ ___
 
 Similar can be done for many different types of switches, lights, input_boolean, binary_sensors, etc.
 
+___
+### Espresso_On.tsk.xml and Espresso_Off.tsk.xml
+
+Sends a POST message through RESTask to Home Assistant, using webhook id in an automation. This automation turns on/off the espresso machine switch.
+
+It then:
+* Sets a global variable in Tasker (`%ESPRESSO`) to on/off.
+* Sends the variable `%arcomm` (whatever is right of the =:=, i.e. `on` or `off`) to the KWGT variable, `Espresso_state`, which is used to control the color of the Espresso Machine button on the KWGT (Kustom) widget.
+___
+### Kitchen_Lights_On.tsk.xml and Kitchen_Lights_Off.tsk.xml
+
+Sends a POST message through RESTask to Home Assistant, using webhook id in an automation. This automation turns on/off the kitchen lights.
+
+It then:
+* Sets a global variable in Tasker (`%KITCHEN_LIGHTS_STATE`) to on/off.
+* Sends the variable `%arcomm` (whatever is right of the =:=, i.e. `on` or `off`) to the KWGT variable, `Kitchen_lights_state`, which is used to control the color of the Espresso Machine button on the KWGT (Kustom) widget.
+___
+
+Again, the same procudure can be used for many other lights and switches.
+
