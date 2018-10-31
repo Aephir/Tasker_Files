@@ -49,19 +49,19 @@ It then:
 * Sets a global variable in Tasker (`%FOUNTAIN`) to on/off.
 * Sends the variable `%arcomm` (whatever is right of the =:=, i.e. `on` or `off`) to the KWGT variable, `Fountain_state`, which is used to control the color of the Espresso Machine button on the KWGT (Kustom) widget.
 ___
-### Fountain_State.prf.xml
+### Kitchen_Lights_State.prf.xml
 
 Receives a message from Home Assistant via AutoRemote with message 
 ```
-fountain_state_is=:=on
+kitchen_lights_state_is=:=on
 ```
 or
 ```
-fountain_state_is=:=off
+kitchen_lights_state_is=:=off
 ```
 It then:
-* Sets a global variable in Tasker (`%FOUNTAIN`) to on/off.
-* Sends the variable `%arcomm` (whatever is right of the =:=, i.e. `on` or `off`) to the KWGT variable, `Fountain_state`, which is used to control the color of the Espresso Machine button on the KWGT (Kustom) widget.
+* Sets a global variable in Tasker (`%KITCHEN_LIGHTS_STATE`) to on/off.
+* Sends the variable `%arcomm` (whatever is right of the =:=, i.e. `on` or `off`) to the KWGT variable, `Kitchen_lights_state`, which is used to control the color of the Espresso Machine button on the KWGT (Kustom) widget.
 ___
 
 Similar can be done for many different types of switches, lights, input_boolean, binary_sensors, etc.
