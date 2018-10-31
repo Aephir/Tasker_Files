@@ -69,4 +69,7 @@ It then:
 ___
 
 Again, the same procudure can be used for many other lights and switches.
+___
+### Notification_From_Home_Assistant.tsk.xml
+
 
