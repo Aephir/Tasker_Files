@@ -4,6 +4,8 @@ Files, profiles and tasks for Tasker.
 Many integrate with my [Home Assistant](https://github.com/Aephir/Home_Assistant), and utilize my [appdaemon python scripts](https://github.com/Aephir/Home_Assistant-Accessory-files/tree/master/appdaemon_scripts).
 
 Files include:
+
+## Tasker Profiles
 ___
 ### Espresso_Machine_State.prf.xml
 
@@ -50,6 +52,23 @@ ___
 
 Similar can be done for many different types of switches, lights, input_boolean, binary_sensors, etc.
 
+### Latest_Notification.prf.xml
+
+Receives a message from Home Assistant via AutoRemote with message. This message is then used to set a variable. In this version, I receive the name of a door, e.g. `Basement` or `Front`.
+
+It then sets an array (local array, can only be used within the specific task, all data that is used outside of this task is then set into a global variable), `%array` to `%arcomm, door, was, opened, at, %TIME`. Splitter is set to `,` (comma). `%arcomm` is what is sent, to the left of the `=:=`.
+
+The it uses variable join on `%array`. `Joiner`is set to ( ) `whitespace`. This creates a string; `%arcomm door was opened at %TIME`.
+
+The global variable, `%Latest_notification` is set to this joined array. Now we can discard the local variable, `%array`, since we have saved what we need in the globabl variable.
+
+Lastly, the sctring `%arcomm door was opened at %TIME` is sent to Kustom via `KWGT send variable` in the `Latest_notification` variable. This is then used to display info on my widget.
+
+![Kustom_widget](https://github.com/Aephir/Images/blob/master/Kusotm_(KWGT)_widget_0.1.jpg)
+
+
+
+## Tasker Tasks
 ___
 ### Espresso_On.tsk.xml and Espresso_Off.tsk.xml
 
